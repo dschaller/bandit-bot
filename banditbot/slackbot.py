@@ -126,8 +126,9 @@ class SlackBot(object):
             timestamp
         )
 
+
 def _message_from_bot(event):
-    return event.get('subtype') == 'bot_message' or event.get('bot_id') != None
+    return event.get('subtype') == 'bot_message' or event.get('bot_id') is not None
 
 
 if __name__ == '__main__':

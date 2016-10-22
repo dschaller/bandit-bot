@@ -1,4 +1,3 @@
-import json
 import logging
 
 log = logging.getLogger(__name__)
@@ -53,7 +52,6 @@ def get_channel_info(channel, slack_client):
         A dictionary representing Slack channel information.
     """
     room_info_command = ''
-    room = ''
     if channel[0] == 'C':  # Check public channels
         room_info_command = 'channels.info'
         room_key = 'channel'
