@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ```
 
 # Testing BanditBot
-To test BanditBot follow the steps in [Developing BanditBot](#Developing-BanditBot) and run
+To test BanditBot follow the steps in [Developing BanditBot](#developing-banditbot) and run
 ```bash
 make test
 ```
