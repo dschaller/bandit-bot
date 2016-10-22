@@ -55,7 +55,7 @@ class SlackBot(object):
     def process_rtm_event(self, event):
         """Dispatcher for RTM event types."""
         if event.get('type') == 'hello':
-            log.debug('BanditBot is online...')
+            log.info('BanditBot is online...')
             return
 
         if _message_from_bot(event):
