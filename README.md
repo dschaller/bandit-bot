@@ -34,3 +34,7 @@ To test BanditBot follow the steps in [Developing BanditBot](#developing-banditb
 ```bash
 make test
 ```
+
+---
+##### Acknowledgements
+* Thanks to [lyft/bandit-high-entropy-string](https://github.com/lyft/bandit-high-entropy-string/) for high entropy word patterns.
