@@ -67,16 +67,12 @@ class SlackBot(object):
         if event_subtype == 'message_changed':
             self.process_message_changed_event(event)
         if event_type != 'message':
-            # log.warning('Did not recognize event: {0!r}'.format(event))
             return
 
         try:
             self.process_message_event(event)
         except Exception as e:
             log.exception('Error processing slack RTM event {}: {}'.format(event, e))
-        # Interesting use case here would be to flag sensitive fields using emoticons
-        # elif (event_type == 'reaction_added' or event_type == 'reaction_removed'):
-        #     self.reaction_handler.handle(event)
 
     def process_message_changed_event(self, event):
         channel = event.get('channel')
