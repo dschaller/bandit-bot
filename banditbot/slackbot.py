@@ -114,7 +114,10 @@ class SlackBot(object):
 
     def _compose_message_link(self, channel, timestamp):
         domain = slack.get_team_info(self.slack_client).get('domain')
-        channel_name = slack.get_channel_info(channel, self.slack_client).get('name')
+        try:
+            channel_name = slack.get_channel_info(channel, self.slack_client).get('name')
+        except RuntimeError:
+            channel_name = channel
         timestamp = timestamp.replace('.', '')
         return 'https://{}.slack.com/archives/{}/p{}'.format(
             domain,
